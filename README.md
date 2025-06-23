@@ -1,18 +1,34 @@
-# Full-Stack-E-Commerce-MERN-APP
-Full Stack E-Commerce MERN APP
+# FlashKart 🛒⚡
 
-![Alt text](Full%20Stack%20E-Commerce%20MERN%20App.png?raw=true "Title")
+**FlashKart** is a modern, responsive, and fully functional e-commerce web application built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It provides a seamless shopping experience for users and a robust administration panel for managing products and users. This project demonstrates a strong understanding of full-stack development, secure authentication, and efficient data management.
 
-Backend .env file 
+---
 
-MONGODB_URI = 
-TOKEN_SECRET_KEY = 
-FRONTEND_URL
+## 🚀 Features
 
-Frontend .env file
+- 🛍️ Product listing with filtering and responsive design
+- 🔍 Search functionality
+- 🧺 Add to cart / remove from cart
+- 👤 User authentication (Register/Login)
+- ⚙️ Admin panel for product management
+- 📦 Order checkout flow (basic version)
+- 🧑‍💻 Role-based rendering for admin and general users
+- 📱 Mobile-responsive UI
+- 🌐 Clean navigation and user experience
 
-REACT_APP_CLOUD_NAME_CLOUDINARY = 
+---
+## 🔧 Tech Stack
 
-Image : https://drive.google.com/drive/folders/1KmY74OYniEodtOVAjNGJv4628HghRbcQ?usp=sharing
+| Frontend       | Backend        | Database | Other Tools        |
+|----------------|----------------|----------|--------------------|
+| React.js       | Express.js     | MongoDB  | React Router DOM   |
+| Redux Toolkit  | Node.js        | Mongoose | JWT (for Auth)     |
+| Tailwind CSS   | bcrypt         |          | React Icons        |
+| Axios          | dotenv         |          | React Toastify     |
 
-Full Video available on youtube : Dynamic Coding with Amit
+---
+
+## 👨‍💻 About Me
+
+I'm Manthan, a 4th-year IT student passionate about web development and building real-world projects.  
+I've built FlashKart to demonstrate my MERN stack skills with clean UI and full-stack functionality.
