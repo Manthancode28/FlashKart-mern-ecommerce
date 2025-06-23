@@ -6,7 +6,7 @@ import VerticalCardProduct from '../components/VerticalCardProduct'
 
 const Home = () => {
   return (
-    <div>
+    <div  className="min-h-screen bg-[#f1f5f9] px-4 md:px-8 lg:px-16">
       <CategoryList/>
       <BannerProduct/>
 

@@ -1,0 +1,22 @@
+# Node.js specific
+node_modules/
+dist/
+.env
+
+# React build output
+client/build/
+client/dist/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.vscode/
+.idea/

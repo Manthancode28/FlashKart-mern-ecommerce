@@ -4,16 +4,21 @@ import { FaRegCircleUser } from "react-icons/fa6";
 import { Link, Outlet, useNavigate } from 'react-router-dom';
 import ROLE from '../common/role';
 
+
 const AdminPanel = () => {
     const user = useSelector(state => state?.user?.user)
     const navigate = useNavigate()
 
 
-    useEffect(()=>{
-        if(user?.role !== ROLE.ADMIN){
-            navigate("/")
-        }
-    },[user])
+   useEffect(() => {
+
+
+  if (user?.role?.toLowerCase() !== ROLE.ADMIN.toLowerCase()) {
+    navigate("/");
+  }
+}, [user]);
+
+
 
   return (
     <div className='min-h-[calc(100vh-120px)] md:flex hidden'>

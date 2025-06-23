@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
-import Logo from './Logo'
+
+import myLogo from '../assest/ecommerce2.png'
 import { GrSearch } from "react-icons/gr";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { FaShoppingCart } from "react-icons/fa";
@@ -11,6 +12,7 @@ import { setUserDetails } from '../store/userSlice';
 import ROLE from '../common/role';
 import Context from '../context';
 
+const userRole = "ADMIN";
 const Header = () => {
   const user = useSelector(state => state?.user?.user)
   const dispatch = useDispatch()
@@ -54,10 +56,10 @@ const Header = () => {
   }
   return (
     <header className='h-16 shadow-md bg-white fixed w-full z-40'>
-      <div className=' h-full container mx-auto flex items-center px-4 justify-between'>
-            <div className=''>
+      <div className=' h-full container mx-auto flex items-center px-4 md:px-8 lg:px-16 justify-between'>
+           <div className=''>
                 <Link to={"/"}>
-                    <Logo w={90} h={50}/>
+                    <img src={myLogo} alt="Logo" className="h-12 w-auto object-contain" />
                 </Link>
             </div>
 
@@ -88,19 +90,32 @@ const Header = () => {
                   }
                   
                   
-                  {
-                    menuDisplay && (
-                      <div className='absolute bg-white bottom-0 top-11 h-fit p-2 shadow-lg rounded' >
-                        <nav>
-                          {
-                            user?.role === ROLE.ADMIN && (
-                              <Link to={"/admin-panel/all-products"} className='whitespace-nowrap hidden md:block hover:bg-slate-100 p-2' onClick={()=>setMenuDisplay(preve => !preve)}>Admin Panel</Link>
-                            )
-                          }
-                         
-                        </nav>
-                      </div>
-                    )
+                 {
+                      menuDisplay && (
+                          <div className='absolute bg-white bottom-0 top-11 h-fit p-2 shadow-lg rounded' >
+                              <nav>
+                                  {
+                                      user?.role?.toLowerCase() === ROLE.ADMIN.toLowerCase() ? ( 
+                                          <Link 
+                                              to={"/admin-panel/all-products"} 
+                                              className='whitespace-nowrap hidden md:block hover:bg-slate-100 p-2' 
+                                              onClick={() => setMenuDisplay(false)}
+                                          >
+                                              Admin Panel
+                                          </Link>
+                                      ) : ( 
+                                          <Link 
+                                              to={"/cart"} 
+                                              className='whitespace-nowrap hidden md:block hover:bg-slate-100 p-2' 
+                                              onClick={() => setMenuDisplay(false)}
+                                          >
+                                              Orders
+                                          </Link>
+                                      )
+                                  }
+                              </nav>
+                          </div>
+                      )
                   }
                  
                 </div>

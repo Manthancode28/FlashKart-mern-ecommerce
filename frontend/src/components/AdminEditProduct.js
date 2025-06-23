@@ -156,7 +156,7 @@ const AdminEditProduct = ({
            </div>
            </label> 
            <div>
-               {
+               {/* {
                  data?.productImage[0] ? (
                      <div className='flex items-center gap-2'>
                          {
@@ -186,8 +186,38 @@ const AdminEditProduct = ({
                  ) : (
                    <p className='text-red-600 text-xs'>*Please upload product image</p>
                  )
-               }
+               } */}
                
+               {
+                data?.productImage?.length > 0 ? (
+                  <div className='flex items-center gap-2 flex-wrap'>
+                    {data.productImage?.map((el, index) => (
+                      <div key={index} className='relative group'>
+                        <img
+                          src={el}
+                          alt={`product-${index}`}
+                          width={80}
+                          height={80}
+                          className='bg-slate-100 border cursor-pointer'
+                          onClick={() => {
+                            setOpenFullScreenImage(true);
+                            setFullScreenImage(el);
+                          }}
+                        />
+                        <div
+                          className='absolute bottom-0 right-0 p-1 text-white bg-red-600 rounded-full hidden group-hover:block cursor-pointer'
+                          onClick={() => handleDeleteProductImage(index)}
+                        >
+                          <MdDelete />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className='text-red-600 text-xs'>*Please upload product image</p>
+                )
+              }
+
            </div>
 
            <label htmlFor='price' className='mt-3'>Price :</label>
