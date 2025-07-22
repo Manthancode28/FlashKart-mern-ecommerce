@@ -1,4 +1,4 @@
-const backendDomin = "http://localhost:8080"
+const backendDomin = "https://flashkart-mern-ecommerce-backend.onrender.com"
 
 const SummaryApi = {
     signUP : {
