@@ -21,6 +21,7 @@ async function updateUser(req,res){
         const updateUser = await userModel.findByIdAndUpdate(userId,payload)
 
         
+        
         res.json({
             data : updateUser,
             message : "User Updated",
