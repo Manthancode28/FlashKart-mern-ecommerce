@@ -2,7 +2,7 @@ const userModel = require("../../models/userModel")
 
 async function updateUser(req,res){
     try{
-        const sessionUser = req.userId
+        const sessionUser = req.userId  
 
         const { userId , email, name, role} = req.body
 

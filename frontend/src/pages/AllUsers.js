@@ -27,7 +27,7 @@ const AllUsers = () => {
             setAllUsers(dataResponse.data)
         }
 
-        if(dataResponse.error){
+        if(dataResponse.error){ 
             toast.error(dataResponse.message)
         }
 

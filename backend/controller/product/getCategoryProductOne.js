@@ -1,5 +1,6 @@
 const productModel = require("../../models/productModel")
 
+// For displaying Category List on Home Page
 
 const getCategoryProduct = async(req,res)=>{
     try{

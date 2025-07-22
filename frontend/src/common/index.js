@@ -38,11 +38,11 @@ const SummaryApi = {
         method  : 'post'
     },
     categoryProduct : {
-        url : `${backendDomin}/api/get-categoryProduct`,
+        url : `${backendDomin}/api/get-categoryProduct`, // For display category list on Home Page
         method : 'get'
     },
     categoryWiseProduct : {
-        url : `${backendDomin}/api/category-product`,
+        url : `${backendDomin}/api/category-product`, // Used in heler for fecthing product accourding to category
         method : 'post'
     },
     productDetails : {

@@ -19,7 +19,7 @@ const countAddToCartProduct = async(req,res)=>{
     }catch(error){
         res.json({
             message : error.message || error,
-            error : false,
+            error : true,
             success : false,
         })
     }

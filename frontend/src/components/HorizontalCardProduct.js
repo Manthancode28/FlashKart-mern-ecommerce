@@ -25,6 +25,7 @@ const HorizontalCardProduct = ({ category, heading }) => {
       const categoryProduct = await fetchCategoryWiseProduct(category);
       setData(categoryProduct?.data || []); // ✅ safe fallback
       setLoading(false);
+
     } catch (error) {
       console.error('Error fetching category products:', error);
       setData([]); // ✅ fallback to empty
