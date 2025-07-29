@@ -116,12 +116,7 @@ const HorizontalCardProduct = ({ category, heading }) => {
                     {displayINRCurrency(product?.price)}
                   </p>
                 </div>
-                {/* <button
-                  className="text-sm bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full mt-3 transition-colors shadow-sm hover:shadow-md" // Back to Red
-                  onClick={(e) => handleAddToCart(e, product?._id)}
-                >
-                  Add to Cart
-                </button> */}
+               
               </div>
             </Link>
           ))
